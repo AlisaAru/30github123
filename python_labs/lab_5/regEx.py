@@ -86,3 +86,35 @@ def snake_to_camel(snake_str):
 # Test
 print(snake_to_camel("snake_case_example"))  # snakeCaseExample
 print(snake_to_camel("test_string")) 
+
+
+#8 
+def split_at_uppercase(text):
+    # This will split at positions where there's an uppercase letter,
+    # but keep the uppercase letter in the result.
+    return re.split(r'(?=[A-Z])', text)
+
+# Test
+sample_text = "HelloWorldExample"
+print(split_at_uppercase(sample_text))
+
+
+#9
+def insert_spaces_before_capital(text):
+    # Insert space before any capital letter that is not at the start of the string
+    return re.sub(r'(?<!^)(?=[A-Z])', ' ', text)
+
+# Test
+sample_text = "HelloWorldExample"
+print(insert_spaces_before_capital(sample_text))
+
+
+#10
+def camel_to_snake(camel_str):
+    # Insert an underscore before any uppercase letter that is not at the start
+    snake = re.sub(r'(?<!^)(?=[A-Z])', '_', camel_str)
+    return snake.lower()
+
+# Test
+print(camel_to_snake("camelCaseExample"))  # camel_case_example
+print(camel_to_snake("CamelCaseExample"))  
