@@ -197,3 +197,4 @@ print(json.dumps(receipt_data, ensure_ascii=False, indent=4))
 
 
 print("Don't forget changes!")
+print("Today was difficult day")
