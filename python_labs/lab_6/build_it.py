@@ -73,3 +73,26 @@ result2 = all_true_in_tuple(my_tuple2)
 print(f"Are all elements of {my_tuple2} true? {result2}")
 
 
+# sorted() with a Custom Key Function
+# We have a list of tuples (name, score)
+players = [
+    ("Alice", 50),
+    ("Bob", 120),
+    ("Charlie", 75),
+    ("Diana", 120),
+    ("Eve", 50)
+]
+
+# Sort primarily by score (descending), then by name (ascending)
+sorted_players = sorted(players, key=lambda x: (-x[1], x[0]))
+
+print("Sorted players:", sorted_players)
+
+
+#enumerate() with a Custom Start Index
+
+fruits = ["apple", "banana", "cherry"]
+
+# Start counting from 1
+for index, fruit in enumerate(fruits, start=1):
+    print(index, fruit)
